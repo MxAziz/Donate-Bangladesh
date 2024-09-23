@@ -24,7 +24,7 @@
 <body class="font">
     <header class="bg-orange-50">
         <nav class="w-11/12 mx-auto flex justify-between py-6 ">
-            <button class="btn btn-lg bg-lime-400 hover:bg-lime-500 text-xl font-semibold">Blog</button>
+            <button class="btn btn-lg hidden sm:block bg-lime-400 hover:bg-lime-500 text-xl font-semibold">Blog</button>
 
             <div class="flex gap-4 justify-center items-center ">
                 <img src="./assets/logo.png" alt="img">
@@ -40,11 +40,33 @@
     </header>
 
     <main class="w-11/12 mx-auto py-20">
+
         <!-- sticky 2 btn -->
          <div class="flex gap-4 justify-center">
             <button class="btn btn-lg bg-lime-400 hover:bg-lime-500">Donation</button>
             <button class="btn btn-lg">History</button>
          </div>
+
+         <!-- card 1 section-->
+          <section class="lg:flex border rounded-2xl mt-8 p-8 ">
+            <figure class="flex-1">
+                <img class="" src="./assets/noakhali.png" alt="">
+            </figure>
+            <!-- text content -->
+            <div class="flex-1 space-y-6 mt-5 md:mt-0">
+                <div class="flex space-x-3 items-center ">
+                    <img src="./assets/coin.png" alt="">
+                    <p><span>2600</span> BDT</p>
+                </div>
+                <h3 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
+                <p class="text-[rgba(17, 17, 17, 0.7)] font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <!-- input and btn -->
+                 <div class="">
+                    <div class=""><input class="border w-full rounded-lg p-4" placeholder="Write Donation Amount" type="text"></div>
+                    <div class=""><button class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4">Donate Now</button></div>
+                 </div>
+            </div>
+          </section>
 
     </main>
     <footer class=""></footer>

@@ -22,14 +22,14 @@
 </head>
 
 <body class="font">
-    <header class=" fixed top-0 w-full">
-        <div class="bg-orange-50">
+    <header id="blur" class=" fixed top-0 w-full">
+        <div id="blur-navbar" class="bg-orange-50">
             <nav class="w-11/12 mx-auto flex justify-between py-6 ">
                 <button id="blog-btn" class="btn px-6  bg-lime-400 hover:bg-lime-500 text-xl font-semibold">Blog</button>
     
                 <div class="flex gap-4 justify-center items-center ">
-                    <img src="./assets/logo.png" alt="img">
-                    <h1 class="text-xl font-bold  hidden sm:block">Donate Bangladesh</h1>
+                    <img class="hidden sm:block" src="./assets/logo.png" alt="img">
+                    <h1 class="text-xl font-bold  ">Donate Bangladesh</h1>
                 </div>
                 
                  <div class="flex gap-3 justify-center items-center">
@@ -40,7 +40,7 @@
         </div>
 
          <!-- sticky 2 btn -->
-         <div class="flex gap-4 justify-center pt-12 pb-8 bg-white">
+         <div id="blur-2btn" class="flex gap-4 justify-center pt-10 pb-6 ">
             <button class="btn btn-lg bg-lime-400 hover:bg-lime-500">Donation</button>
             <button class="btn btn-lg">History</button>
          </div>
@@ -66,7 +66,7 @@
                  <div class="">
                     <div class=""><input id="noakhali-input" class="border-2 w-full rounded-lg p-4" placeholder="Write Donation Amount" type="text"></div>
                     <div class="">
-                        <button id="noakhali-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" onclick="my_modal_1.showModal()">Donate Now</button>
+                        <button id="noakhali-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" >Donate Now</button>
                         <dialog id="my_modal_1" class="modal">
                             <div class="modal-box">
                                 <h3 class=" font-bold text-center text-3xl">Congrats!</h3>
@@ -103,7 +103,7 @@
                  <div class="">
                     <div class=""><input id="feni-input" class="border-2 w-full rounded-lg p-4" placeholder="Write Donation Amount" type="text"></div>
                     <div class="">
-                        <button id="feni-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" onclick="my_modal_2.showModal()">Donate Now</button>
+                        <button id="feni-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" >Donate Now</button>
                         <dialog id="my_modal_2" class="modal">
                             <div class="modal-box">
                                 <h3 class=" font-bold text-center text-3xl">Congrats!</h3>
@@ -141,8 +141,8 @@
                  <div class="">
                     <div class=""><input id="quota-input" class="border-2 w-full rounded-lg p-4" placeholder="Write Donation Amount" type="text"></div>
                     <div class="">
-                        <button id="quota-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" onclick="my_modal_3.showModal()">Donate Now</button>
-                        <dialog id="my_modal_3" class="modal">
+                        <button id="quota-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" >Donate Now</button>
+                        <dialog id="my_modal_3" class="modal" >
                             <div class="modal-box">
                                 <h3 class=" font-bold text-center text-3xl">Congrats!</h3>
                                 <div class="flex justify-center mt-3"><img src="./assets/coin.png" alt=""></div>
@@ -162,6 +162,12 @@
           </section>
 
     </main>
+
+    <!-- history section -->
+     <section class="">
+
+     </section>
+
     <footer class="h-24 bg-orange-50"></footer>
 
     <script src="./js/main.js"></script>

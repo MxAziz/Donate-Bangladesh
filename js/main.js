@@ -37,16 +37,19 @@ document.getElementById('noakhali-btn').addEventListener('click', function(){
 
     const balance = parseFloat(document.getElementById('account-balance').innerText);
     const noakhaliBalance = parseFloat(document.getElementById('noakhali-balance').innerText);
-    const noakhaliInput = parseFloat(document.getElementById('noakhali-input').value );
+    const noakhaliInput = document.getElementById('noakhali-input').value.trim();
+    // const noakhaliInputValue = Number(noakhaliInput);
 
-    if(isNaN(noakhaliInput) || (noakhaliInput > balance)){
+    if(noakhaliInput === '' || isNaN(noakhaliInput) || parseFloat(noakhaliInput) <= 0 || parseFloat(noakhaliInput) > balance){
         alert("Invalid Donation Amount");
     }
     else{
-        const newAccountBalance = balance - noakhaliInput;
+        const noakhaliInputValue = parseFloat(noakhaliInput);
+
+        const newAccountBalance = balance - noakhaliInputValue;
         document.getElementById('account-balance').innerText = newAccountBalance;
 
-        const newNoakhaliBalance = noakhaliBalance + noakhaliInput ;
+        const newNoakhaliBalance = noakhaliBalance + noakhaliInputValue ;
         document.getElementById('noakhali-balance').innerText = newNoakhaliBalance;
 
         // modal code
@@ -61,16 +64,18 @@ document.getElementById('feni-btn').addEventListener('click', function(){
 
     const balance = parseFloat(document.getElementById('account-balance').innerText);
     const feniBalance = parseFloat(document.getElementById('feni-balance').innerText);
-    const feniInput = parseFloat(document.getElementById('feni-input').value );
+    const feniInput = document.getElementById('feni-input').value.trim();
 
-    if(isNaN(feniInput) || (feniInput > balance)){
+    if(feniInput === '' || isNaN(feniInput) || parseFloat(feniInput) <= 0 || parseFloat(feniInput) > balance){
         alert("Invalid Donation Amount");
     }
     else{
-        const newAccountBalance = balance - feniInput;
+        const feniInputValue = parseFloat(feniInput);
+
+        const newAccountBalance = balance - feniInputValue;
         document.getElementById('account-balance').innerText = newAccountBalance;
 
-        const newFeniBalance = feniInput + feniBalance ;
+        const newFeniBalance = feniInputValue + feniBalance ;
         document.getElementById('feni-balance').innerText = newFeniBalance;
 
         // modal code
@@ -85,16 +90,19 @@ document.getElementById('quota-btn').addEventListener('click', function(){
 
     const balance = parseFloat(document.getElementById('account-balance').innerText);
     const quotaBalance = parseFloat(document.getElementById('quota-balance').innerText);
-    const quotaInput = parseFloat(document.getElementById('quota-input').value );
+    const quotaInput = document.getElementById('quota-input').value.trim();
 
-    if(isNaN(quotaInput) || (quotaInput > balance)){
+
+    if(quotaInput === '' || isNaN(quotaInput) || parseFloat(quotaInput) <= 0 || parseFloat(quotaInput) > balance){
         alert("Invalid Donation Amount");
     }
     else{
-        const newAccountBalance = balance - quotaInput;
+        const quotaInputValue = parseFloat(quotaInput);
+
+        const newAccountBalance = balance - quotaInputValue;
         document.getElementById('account-balance').innerText = newAccountBalance;
 
-        const newQuotaBalance = quotaBalance + quotaInput ;
+        const newQuotaBalance = quotaBalance + quotaInputValue ;
         document.getElementById('quota-balance').innerText = newQuotaBalance;
 
         // modal code

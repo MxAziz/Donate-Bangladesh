@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog ||Donate Bangladesh</title>
+    <title>Blog || Donate Bangladesh</title>
     <!-- daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.js"></script>
+
 </head>
 <body>
     <header>
-        <div class="bg-orange-50"></div>
+        <div class="bg-orange-50  fixed top-0 w-full z-10">
+
             <nav class="w-11/12 mx-auto flex justify-between py-6 ">
-                <button class="btn px-6   bg-lime-400 hover:bg-lime-500 text-xl font-semibold">Home</button>
+                <button id="home-btn" class="btn px-6   bg-lime-400 hover:bg-lime-500 text-xl font-semibold">Home</button>
     
                 <div class="md:flex gap-4 justify-center items-center hidden sm:block ">
                     <img src="./assets/logo.png" alt="img">
@@ -26,5 +29,72 @@
             </nav>
         </div>
     </header>
+
+    <main class="w-11/12 mx-auto my-14 mt-36">
+        <h1 class="text-5xl font-bold mb-7">Important FAQ !</h1>
+        <!-- accordion -->
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM) ?</div>
+            <div class="collapse-content">
+              <p>The Document Object Model (DOM) is a programming interface that represents the structure of a web page as a tree of objects. Each element (like HTML tags) on a webpage is represented as a node in this tree, which can be manipulated using programming languages such as JavaScript.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+            <div class="collapse-content">
+              <p>To select an element from the DOM, you can use methods like getElementById() for selecting by ID, querySelector() for the first matching CSS selector, and querySelectorAll() for all elements matching a CSS selector. These methods allow you to interact with and manipulate webpage elements efficiently.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegate in the context of the DOM, and why it is useful ?</div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a technique where a single event listener is added to a parent element to manage events from multiple child elements. Instead of adding separate listeners to each child, the event is captured at a higher level and handled through event bubbling. <br>
+                Why is it useful? <br>
+                1.Improves performance by reducing the number of event listeners. <br>
+                2.Simplifies code when dealing with dynamic content.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using the dom ?</div>
+            <div class="collapse-content">
+              <p>To manipulate an element's attributes in the DOM, use setAttribute() to change or add attributes and removeAttribute() to remove them. For styles, modify the element’s style property directly. For example, element.style.color = "red"; changes the text color to red.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+          <!-- text -->
+          <div class=""><button id="noakhali-btn" class="w-full btn btn-lg bg-lime-400 hover:bg-lime-500 mt-4" onclick="my_modal_1.showModal()">Donate Now</button></div>
+          <!-- popup modal -->
+           <!-- Open the modal using ID.showModal() method -->
+              <dialog id="my_modal_1" class="modal">
+              <div class="modal-box">
+                  <h3 class="text-lg font-bold">Hello!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="modal-action">
+                  <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                  </form>
+                  </div>
+              </div>
+              </dialog>
+           <!-- --------------- -->
+           <!-- -------- -->
+       
+    </main>
+
+<script src="./js/main.js"></script>
 </body>
 </html>

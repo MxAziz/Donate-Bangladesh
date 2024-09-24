@@ -1,8 +1,8 @@
+
 // navigate the blog.html file
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href = './blog.html';
 })
-
 
 // blur navbar---------------------------------->
 window.addEventListener('scroll', function(){
@@ -21,7 +21,7 @@ window.addEventListener('scroll', function(){
 window.addEventListener('scroll', function(){
     const fixedNavbar = document.getElementById('blur-2btn');
 
-    if(window.scrollY > 30){
+    if(window.scrollY > 10){
         fixedNavbar.classList.add( 'backdrop-blur-xl');
     }
     else{
@@ -30,7 +30,19 @@ window.addEventListener('scroll', function(){
 })
 // ----------------------------------------------------->
 
+// click btn to hide or show------------------------\
+document.getElementById('display-history').addEventListener('click', function(){
+    document.getElementById('display-history').classList.add('bg-lime-400', 'hover:bg-lime-500')
+    document.getElementById('display-donation').classList.remove('bg-lime-400', 'hover:bg-lime-500')
+    showSectionById('history-section');
+})
 
+document.getElementById('display-donation').addEventListener('click', function(){
+    document.getElementById('display-history').classList.remove('bg-lime-400', 'hover:bg-lime-500')
+    document.getElementById('display-donation').classList.add('bg-lime-400', 'hover:bg-lime-500')
+    showSectionById('donation-section');
+})
+// -------------->
 
 // noakhali donate calculation
 document.getElementById('noakhali-btn').addEventListener('click', function(){
@@ -51,13 +63,18 @@ document.getElementById('noakhali-btn').addEventListener('click', function(){
 
         const newNoakhaliBalance = noakhaliBalance + noakhaliInputValue ;
         document.getElementById('noakhali-balance').innerText = newNoakhaliBalance;
+        
+        // history section -------->
+        const text = 'Flood at Noakhali, Bangladesh';
+        donateCard(noakhaliInputValue, text);
+        // ------------------------>
 
         // modal code
         const modal = document.getElementById('my_modal_1').showModal();
-        modal.checked = true;
     }
 
 })
+
 
 // feni donate calculation
 document.getElementById('feni-btn').addEventListener('click', function(){
@@ -78,9 +95,13 @@ document.getElementById('feni-btn').addEventListener('click', function(){
         const newFeniBalance = feniInputValue + feniBalance ;
         document.getElementById('feni-balance').innerText = newFeniBalance;
 
+        // history section -------->
+        const text = 'Flood Relief in Feni,Bangladesh';
+        donateCard(feniInputValue, text);
+        // ------------------------>
+
         // modal code
         const modal = document.getElementById('my_modal_2').showModal();
-        modal.checked = true;
     }
 
 })
@@ -105,9 +126,13 @@ document.getElementById('quota-btn').addEventListener('click', function(){
         const newQuotaBalance = quotaBalance + quotaInputValue ;
         document.getElementById('quota-balance').innerText = newQuotaBalance;
 
+        // history section -------->
+        const text = 'Injured in the Quota Movement';
+        donateCard(quotaInputValue, text);
+        // ------------------------>
+
         // modal code
         const modal = document.getElementById('my_modal_3').showModal();
-        modal.checked = true;
     }
 
 })
